@@ -129,3 +129,17 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     # '/var/www/static/',
 ]
+
+
+#configuring firebase
+
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("matrimony\services.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://matrimonial-site-e7828-default-rtdb.firebaseio.com/',
+    'storageBucket': 'matrimony-1f1f1.appspot.com',
+})
+
+
