@@ -22,4 +22,5 @@ from HomeApp import urls
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("HomeApp.urls")),
+    path("login/",include("SignupApp.urls")),
 ]
